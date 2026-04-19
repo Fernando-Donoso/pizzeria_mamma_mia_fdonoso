@@ -1,6 +1,14 @@
 import React from "react";
+import { formatPrice } from "../utils/formatPrice";
 
-const Navbar = ({ isLoggedIn = false }) => {
+
+// Simulación: cambiar a true para simular usuario logueado
+const token = false;
+
+// Simulación: valor fijo del total de la compra
+const total = 25000;
+
+const Navbar = () => {
   return (
     <nav style={styles.navbar}>
       <div style={styles.container}>
@@ -10,11 +18,14 @@ const Navbar = ({ isLoggedIn = false }) => {
           <span style={styles.brand}>Pizzería Mamma Mia!</span>
 
           <div className="btn-group" role="group">
+
+            {/* Home: siempre visible */}
             <button type="button" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
               🍕 Home
             </button>
 
-            {isLoggedIn ? (
+            {/* Botones condicionales según token */}
+            {token ? (
               <>
                 <button type="button" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
                   🔓 Profile
@@ -33,13 +44,14 @@ const Navbar = ({ isLoggedIn = false }) => {
                 </button>
               </>
             )}
+
           </div>
         </div>
 
-        {/* Lado derecho: Total carrito */}
+        {/* Lado derecho: Total carrito — siempre visible */}
         <div>
           <button type="button" className="btn btn-outline-success btn-sm" style={styles.cartBtn}>
-            🛒 Total: $25.00
+            🛒 Total: ${formatPrice(total)}
           </button>
         </div>
 
