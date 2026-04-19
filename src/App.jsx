@@ -1,6 +1,7 @@
 import './App.css'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from './components/Home';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       {/* Contenido principal */}
       <main style={styles.main}>
         {/* Aquí irán los demás componentes y rutas */}
+         <Home />
       </main>
 
       {/* Pie de página */}
@@ -32,6 +34,5 @@ const styles = {
     flex: 1,
   },
 };
-
 
 export default App
