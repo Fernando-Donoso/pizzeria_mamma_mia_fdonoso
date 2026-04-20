@@ -1,3 +1,14 @@
+
+# Repository Github
+https://github.com/Fernando-Donoso/pizzeria_mamma_mia_fdonoso
+
+# Mi despliegue esta en Render
+https://pizzeria-mamma-mia-fdonoso.onrender.com
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
