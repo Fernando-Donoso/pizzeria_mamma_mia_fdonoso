@@ -31,11 +31,11 @@ function LoginForm (){
 
             <label htmlFor="Email">Email</label>
             <br />
-            <input type="email" placeholder="Enter your email" value={email} onChange={(evento) =>{ handleChangeEmail(evento.target.value) }}/>
+            <input type="email" placeholder="Enter your email" value={email} required onChange={(evento) =>{ handleChangeEmail(evento.target.value) }}/>
             <br />
             <label htmlFor="Password">Password</label>
             <br />
-            <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="********"/>
+            <input value={password} required onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="********"/>
             <br />
             <button type="submit">Login</button>
         </form>
