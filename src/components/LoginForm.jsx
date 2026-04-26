@@ -26,18 +26,18 @@ function LoginForm (){
 
     return(
         <form className="loginForm" action="" onSubmit={(e)=>{ handleSubmit(e) }}>
-            <h2>Iniciar sesión</h2>
+            <h1>Login</h1>
 
 
-            <label htmlFor="Email">Ingrese su correo electronico</label>
+            <label htmlFor="Email">Email</label>
             <br />
-            <input type="email" placeholder="ejemplo@email.com" value={email} onChange={(evento) =>{ handleChangeEmail(evento.target.value) }}/>
+            <input type="email" placeholder="Enter your email" value={email} onChange={(evento) =>{ handleChangeEmail(evento.target.value) }}/>
             <br />
-            <label htmlFor="Contraseña">Ingrese su contraseña</label>
+            <label htmlFor="Password">Password</label>
             <br />
             <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="********"/>
             <br />
-            <button type="submit">Iniciar sesión</button>
+            <button type="submit">Login</button>
         </form>
     )
 }

@@ -29,7 +29,7 @@ export default function RegisterForm() {
         handleSubmit(e);
       }}
     >
-      <h2>Crear una cuenta</h2>
+      <h1>Registro</h1>
 
       <label htmlFor="email">Email</label>
       <br />
