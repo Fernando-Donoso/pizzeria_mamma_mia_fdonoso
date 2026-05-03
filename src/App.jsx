@@ -2,8 +2,8 @@ import './App.css'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from './components/Home';
-import RegisterForm from './components/RegisterForm.jsx';
-import LoginForm from './components/LoginForm.jsx';
+// import RegisterForm from './components/RegisterForm.jsx';
+// import LoginForm from './components/LoginForm.jsx';
 
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
       {/* Contenido principal */}
       <main style={styles.main}>
         {/* Aquí irán los demás componentes y rutas */}
-        {/* <Home />*/}
-         <RegisterForm/>
-          <LoginForm/>
+       <Home />
+       {/*  <RegisterForm/> */}
+       {/*   <LoginForm/>*/}
       </main>
 
       {/* Pie de página */}
