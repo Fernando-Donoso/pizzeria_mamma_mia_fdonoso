@@ -6,6 +6,10 @@ https://github.com/Fernando-Donoso/pizzeria_mamma_mia_fdonoso
 https://pizzeria-mamma-mia-fdonoso.onrender.com
 
 
+# Rama Renderizacion_dinamica_componentes_fdonoso
+https://pizzeria-mamma-mia-fdonoso-dinamica.onrender.com
+
+
 
 
 
