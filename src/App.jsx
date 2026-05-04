@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from './components/Home';
+import Cart from "./components/Cart";
 // import RegisterForm from './components/RegisterForm.jsx';
 // import LoginForm from './components/LoginForm.jsx';
 
@@ -16,9 +17,10 @@ function App() {
       {/* Contenido principal */}
       <main style={styles.main}>
         {/* Aquí irán los demás componentes y rutas */}
-       <Home />
+       {/*   <Home />  */}
        {/*  <RegisterForm/> */}
        {/*   <LoginForm/>*/}
+      <Cart />
       </main>
 
       {/* Pie de página */}
