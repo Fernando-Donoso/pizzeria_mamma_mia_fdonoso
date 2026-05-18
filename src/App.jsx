@@ -1,31 +1,35 @@
 import './App.css'
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from './components/Home';
-import Cart from "./components/Cart";
-// import RegisterForm from './components/RegisterForm.jsx';
-// import LoginForm from './components/LoginForm.jsx';
-
+import Home from './views/Home';
+import Cart from "./views/Cart";
+import Pizza from './views/Pizza';
+import RegisterForm from './views/RegisterForm.jsx';
+import LoginForm from './views/LoginForm.jsx';
+import Profile from './views/Profile';
+import NotFound from "./views/NotFound";
 
 function App() {
   return (
-      <div style={styles.wrapper}>
-
-      {/* Barra de navegación */}
+    <div style={styles.wrapper}>
       <Navbar />
 
-      {/* Contenido principal */}
       <main style={styles.main}>
-        {/* Aquí irán los demás componentes y rutas */}
-       {/*   <Home />  */}
-       {/*  <RegisterForm/> */}
-       {/*   <LoginForm/>*/}
-      <Cart />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pizza" element={<Pizza />} />
+          <Route path="/pizza/p001" element={<Pizza />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/404" element={<NotFound/>}/>
+          <Route path="*" element={<NotFound/>}/>
+        </Routes>
       </main>
 
-      {/* Pie de página */}
       <Footer />
-
     </div>
   );
 }

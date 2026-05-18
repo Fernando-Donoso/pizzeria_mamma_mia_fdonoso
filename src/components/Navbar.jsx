@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { formatPrice } from "../utils/formatPrice";
 
 
@@ -20,28 +21,30 @@ const Navbar = () => {
           <div className="btn-group" role="group">
 
             {/* Home: siempre visible */}
-            <button type="button" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
+            <Link to="/" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
               🍕 Home
-            </button>
+            </Link>
+
+            {/* Profile: siempre visible */}
+            <Link to="/profile" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
+              🔓 Profile
+            </Link>
 
             {/* Botones condicionales según token */}
             {token ? (
               <>
-                <button type="button" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
-                  🔓 Profile
-                </button>
                 <button type="button" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
                   🔒 Logout
                 </button>
               </>
             ) : (
               <>
-                <button type="button" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
+                <Link to="/login" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
                   🔐 Login
-                </button>
-                <button type="button" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
+                </Link>
+                <Link to="/register" className="btn btn-outline-secondary btn-sm" style={styles.btn}>
                   🔐 Register
-                </button>
+                </Link>
               </>
             )}
 
@@ -50,9 +53,9 @@ const Navbar = () => {
 
         {/* Lado derecho: Total carrito — siempre visible */}
         <div>
-          <button type="button" className="btn btn-outline-success btn-sm" style={styles.cartBtn}>
+          <Link to="/cart" className="btn btn-outline-success btn-sm" style={styles.cartBtn}>
             🛒 Total: ${formatPrice(total)}
-          </button>
+          </Link>
         </div>
 
       </div>

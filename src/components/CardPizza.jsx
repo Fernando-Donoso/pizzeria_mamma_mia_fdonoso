@@ -3,6 +3,13 @@ import React from "react";
 const formatPrice = (value) => value.toLocaleString("es-CL");
 
 const CardPizza = ({ name, price, ingredients, img }) => {
+    const safeIngredients = Array.isArray(ingredients)
+    ? ingredients
+    : typeof ingredients === "string"
+    ? ingredients.split(",").map((i) => i.trim())
+    : [];
+
+    
   return (
     <div style={styles.card}>
       {/* Imagen */}
@@ -15,7 +22,8 @@ const CardPizza = ({ name, price, ingredients, img }) => {
         {/* Ingredientes */}
         <p style={styles.ingredientsTitle}>Ingredientes:</p>
         <ul style={styles.ingredientsList}>
-          {ingredients.map((ingredient, index) => (
+{/*          {ingredients.map((ingredient, index) => (  */}
+          {safeIngredients.map((ingredient, index) => (
             <li key={index} style={styles.ingredient}>
               {ingredient}
             </li>
